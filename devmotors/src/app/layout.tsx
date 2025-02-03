@@ -17,6 +17,10 @@ export default function RootLayout({
       <body>
         <Header />
         {children}
+        
+        <p style={{ textAlign: "center", marginTop: 54, marginBottom: 24 }}>
+                Todos direitos reservados @{`${new Date().getFullYear()}`}
+            </p>
       </body>
     </html>
   );
