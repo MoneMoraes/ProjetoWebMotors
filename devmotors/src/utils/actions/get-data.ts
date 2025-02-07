@@ -1,6 +1,10 @@
 
 import { redirect } from "next/navigation";
 
+function delay(ms: number){
+    return new Promise(resolve => setTimeout(resolve, ms))
+}
+
 export async function getDataHome(){
     try{
         const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/objects/67993a9503a8330f06b9e0b2?pretty=true&read_key=${process.env.READ_KEY}&props=slug,title,metadata,type`, { next: { revalidate: 120 } })
